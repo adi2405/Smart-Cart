@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Ensure the sidebar doesn't grow beyond the viewport */
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar-header {
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+}
+
+.nav-links {
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ddd;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #007bff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.top-bar h2 {
+    margin-bottom: 20px;
+}
+
+.overview-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+}
+
+/* Ensure the flex container distributes the space properly */
+.charts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensures charts align to the top */
+    margin-bottom: 20px;
+    gap: 20px; /* Add some spacing between charts */
+}
+
+/* Adjust the chart container */
+.chart-container {
+    flex-grow: 1; /* Allow it to grow based on available space */
+    width: 48%; /* Make sure it takes up 48% of the parent container */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensures a minimum width to prevent shrinking too much */
+}
+
+/* Ensure the canvas adapts properly */
+.chart-container canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sales-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.sales-table table th,
+.sales-table table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Dropdown Chevron Button */
+.chevron-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.rotate-90 {
+    transform: rotate(180deg); /* Rotate 180 degrees */
+}
+
+/* Dropdown content */
+#dropdown {
+    display: none;
+    padding: 0;
+}
+
+.dropdown-content ul {
+    max-height: 300px; /* Set a reasonable max height for the dropdown */
+    overflow-y: auto; /* Make the dropdown scrollable if it has many items */
+}
+
+/* Custom scrollbar for the dropdown content */
+.dropdown-content ul {
+    max-height: 300px; /* Scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* For Firefox, makes the scrollbar thinner */
+    scrollbar-color: #888 #444; /* For Firefox, scrollbar track and thumb color */
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.dropdown-content ul::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.dropdown-content ul::-webkit-scrollbar-track {
+    background: #444; /* Background color of the scrollbar track */
+}
+
+.dropdown-content ul::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 2px solid #444; /* Optional border around the scrollbar thumb */
+}
+
+.dropdown-content ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darken the scrollbar thumb on hover */
+}
+
+#dropdown.open {
+    display: block;
+}
+
+#dropdown ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.menu-item{
+    padding-left: 10px;
+}
+
+#dropdown ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}

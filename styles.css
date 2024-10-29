@@ -1,0 +1,540 @@
+html, body{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Basic Styles */
+body, h1, ul {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 25px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.logout-btn {
+  background-color: #fff; /* Vibrant red color */
+  border: none;
+  color: #45a049;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.logout-btn:hover {
+  background-color: #333333;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown link hover effect */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  text-decoration: none;
+}
+
+/* Logo and Title */
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+header h1 i {
+  margin-right: 10px;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 30px;
+  font-size: large;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #333;
+  font-weight: bolder;
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Assets/Images/supermarket.jpg') no-repeat center center/cover;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  font-size: 1.25rem;
+}
+
+.greeting{
+  display: flex;
+  justify-content: center;
+}
+
+.greeting p{
+  position: absolute;
+  align-items: center;
+  transform: translateY(-190%);
+}
+
+a.btn{
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Predict Now */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 7px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2{
+  color: #333;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  width: 250px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #45a049;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* About Section */
+.about {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  width: 30%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-box i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.feature-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.feature-box p {
+  font-size: 1rem;
+}
+
+/* Team Section */
+.team {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.team p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 30%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+}
+
+/* Social Media Icons */
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #4CAF50;
+}
+
+.socials i {
+  font-size: 2rem; 
+}
+
+/* Content Sections */
+.content {
+  padding: 50px 0;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+#predictionForm,
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#predictionForm label,
+#contactForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333333;
+}
+
+#predictionForm textarea,
+#contactForm textarea,
+#contactForm input {
+  width: 95%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#predictionResult,
+#recommendationsList {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #4CAF50;
+}
+
+.recommendations {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recommendation-item {
+  width: 30%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.recommendation-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recommendation-item h3 {
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #4CAF50;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer p a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensures it stays on top */
+  background-color: #45a049;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+/* Prediction form */
+form.salesform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form.salesform label {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form.salesform input[type="file"] {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+form.salesform input[type="file"]:focus {
+  border-color: #2980b9;
+  outline: none;
+}

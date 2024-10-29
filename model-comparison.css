@@ -1,0 +1,113 @@
+/* Base styles */
+#body-mc {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container-mc {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#h1-mc, #h2-mc {
+    text-align: center;
+    color: #333;
+}
+
+/* Style for the model comparison tables */
+.model-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+}
+
+.model-card h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Charts section */
+.charts-container-mc {
+    margin-top: 40px;
+}
+
+.hidden{
+    display: none;
+}
+
+.chart-mc {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#executionTimeChart{
+    height: 300px;
+    width: 600px;
+}
+
+#silhouetteScoreChart{
+    height: 300px;
+    width: 600px;
+}
+
+#comparisonMetricChart{
+    height: 300px;
+    width: 600px;
+}
+
+/* Button styling */
+#compareBtn {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#compareBtn:hover {
+    background-color: #0056b3;
+}
